@@ -79,6 +79,44 @@ App = {
     }).catch(function(error) {
       console.warn(error);
     });
+  },
+
+  // castVote: function() {
+  //   var candidateId = $('#candidatesSelect').val();
+  //   App.contracts.Election.deployed().then(function(instance) {
+  //     return instance.vote(candidateId, { from: App.account });
+  //   }).then(function(result) {
+  //     // Wait for votes to update
+  //     $("#content").hide();
+  //     $("#loader").show();
+  //   }).catch(function(err) {
+  //     console.error(err);
+  //   });
+  // },
+
+  submitReview: function() {
+    var orderNumber = $('#orderNumber').val();
+    var productID = $('#productID').val();
+    var productName = $('#productName').val();
+    var numStars = $('#numStars').val();
+    var reviewMessage = $('#reviewMessage').val();
+
+    console.log(orderNumber);
+    console.log(productID);
+    console.log(productName);
+    console.log(numStars);
+    console.log(reviewMessage);
+
+
+    App.contracts.ReviewClass.deployed().then(function(instance) {
+      return instance.addReview(productID, orderNumber, productName, reviewMessage, numStars, { from: App.account });
+    }).then(function(result) {
+      // Wait for votes to update
+      $("#content").hide();
+      $("#loader").show();
+    }).catch(function(err) {
+      console.error(err);
+    });
   }
 };
 

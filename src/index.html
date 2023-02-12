@@ -14,7 +14,7 @@
 
 
 
-
+    <!-- Table -->
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
@@ -39,7 +39,43 @@
               </tbody>
             </table>
             <hr/>
+
+
+            <!-- Form -->
+            <!-- <form onSubmit="App.submitReview(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <hr />
+            </form> -->
+
+            <form onSubmit="App.submitReview(); return false;">
+              <label for="orderNumber">Order Number:</label><br>
+              <input type="text" id="orderNumber" name="orderNumber"><br>
+
+              <label for="productID">Product ID:</label><br>
+              <input type="text" id="productID" name="productID"><br>
+
+              <label for="productName">Product Name:</label><br>
+              <input type="text" id="productName" name="productName"><br>
+
+              <label for="numStars">Rating:</label><br>
+              <input type="text" id="numStars" name="numStars">
+
+              <label for="reviewMessage">Message:</label><br>
+              <input type="text" id="reviewMessage" name="reviewMessage">
+              
+              <hr />
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <!-- Account address -->
             <p id="accountAddress" class="text-center"></p>
+          
+          
           </div>
         </div>
       </div>

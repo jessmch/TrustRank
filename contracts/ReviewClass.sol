@@ -25,7 +25,7 @@ contract ReviewClass {
         addReview(1, 850, "Headphone", "Mid product", 3);
     }
 
-    function addReview (uint _product_id, uint _order_number, string _product_name, string _review_message, uint _num_stars) private {
+    function addReview (uint _product_id, uint _order_number, string _product_name, string _review_message, uint _num_stars) public {
         require(!hm_orderNumber_bool[_order_number]); // verify uniqueness of orderNumber
         require(_num_stars >= 1 && _num_stars <= 5); // verify if the rating range is valid
         reviewCount ++;
