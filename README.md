@@ -17,8 +17,11 @@ The order number from the order will be entered in a text box. TrustRank will ve
 After the order number is verified, the user is now able to leave a review for that certain product. 
 They can rate the product from 1-5 (reflected by a star rating) along with a written review of the product. All reviews will be anonymous and contain no user information. Users will also be able to upload a picture of the product that they are reviewing.
 
-**Full Demo:**
+**Full Demo Video:**
 https://youtu.be/Exi922e-ZK4
+
+**Prototype**
+https://www.figma.com/proto/wmVgiHdlOGz5EpFy4XHb0N/TrustRank?node-id=1%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A2
 
 ## Dependencies
 The following prerequisites are needed to run the demo.
