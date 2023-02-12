@@ -1,5 +1,5 @@
-var Election = artifacts.require("./Election.sol");
+var ReviewClass = artifacts.require("./ReviewClass.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Election);
+  deployer.deploy(ReviewClass);
 };

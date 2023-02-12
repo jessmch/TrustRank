@@ -1,0 +1,65 @@
+label {
+    padding: 1% 1%;
+}
+
+button {
+    color: #4724a6;
+    border-color: #4724a6;
+}
+
+#homepageColorCorrection {
+    padding: 5% 15% 5%;
+}
+
+#logo {
+    height: auto;
+    max-width: 20%;
+}
+
+#navbarColorCorrection {
+    padding: 0% 10% 0%;
+
+    background-color: hsl(0, 0%, 97%);
+}
+
+#signintab {
+    height: auto;
+    max-width: 3%;
+}
+
+#homepageColorCorrection {
+    background-color: #cbbcf5;
+    color: #4724a6;
+}
+
+
+#messagePageColorCorrection {
+    padding: 5% 15%;
+    background-color: hsl(0, 0%, 97%);
+    color: #4724a6;
+}
+
+#formPageColorCorrection {
+    padding: 5% 35% 5%;
+    background-color: #cbbcf5;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#addressPageColorCorrection {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: hsl(0, 0%, 97%);
+    color: black;
+}
+
+.title-image {
+    height: auto;
+    max-width: 100%;
+}
+
+#submitButtonlol {
+    background-color: #4724a6;
+}
+
