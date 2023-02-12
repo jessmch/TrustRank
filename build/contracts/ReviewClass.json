@@ -16,6 +16,10 @@
           "type": "uint256"
         },
         {
+          "name": "orderNumber",
+          "type": "uint256"
+        },
+        {
           "name": "productName",
           "type": "string"
         },
@@ -53,21 +57,21 @@
       "type": "constructor"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"reviews\",\"outputs\":[{\"name\":\"productID\",\"type\":\"uint256\"},{\"name\":\"productName\",\"type\":\"string\"},{\"name\":\"reviewMessage\",\"type\":\"string\"},{\"name\":\"numStars\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"reviewCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ReviewClass.sol\":\"ReviewClass\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ReviewClass.sol\":{\"keccak256\":\"0xbcc7e569d4c0cd9f4055b437c6d4be66a8c80922faf5872c67819d0ea07cffda\",\"urls\":[\"bzzr://6c86cb715203445b9b339fbc782b6bcf6861c9571d20f111839f5812ffc731f5\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061009860016040805190810160405280600981526020017f4865616470686f6e6500000000000000000000000000000000000000000000008152506040805190810160405280600d81526020017f47726561742070726f64756374000000000000000000000000000000000000008152506005610124640100000000026401000000009004565b61011f60026040805190810160405280600581526020017f57617463680000000000000000000000000000000000000000000000000000008152506040805190810160405280600b81526020017f4261642070726f647563740000000000000000000000000000000000000000008152506001610124640100000000026401000000009004565b610268565b6001600081548092919060010191905055506080604051908101604052808581526020018481526020018381526020018281525060008060015481526020019081526020016000206000820151816000015560208201518160010190805190602001906101929291906101c3565b5060408201518160020190805190602001906101af9291906101c3565b506060820151816003015590505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061020457805160ff1916838001178555610232565b82800160010185558215610232579182015b82811115610231578251825591602001919060010190610216565b5b50905061023f9190610243565b5090565b61026591905b80821115610261576000816000905550600101610249565b5090565b90565b61032e806102776000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e83ddcea14610051578063eff5924f14610171575b600080fd5b34801561005d57600080fd5b5061007c6004803603810190808035906020019092919050505061019c565b604051808581526020018060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100cc5780820151818401526020810190506100b1565b50505050905090810190601f1680156100f95780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b83811015610132578082015181840152602081019050610117565b50505050905090810190601f16801561015f5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561017d57600080fd5b506101866102fc565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561024e5780601f106102235761010080835404028352916020019161024e565b820191906000526020600020905b81548152906001019060200180831161023157829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ec5780601f106102c1576101008083540402835291602001916102ec565b820191906000526020600020905b8154815290600101906020018083116102cf57829003601f168201915b5050505050908060030154905084565b600154815600a165627a7a72305820d6c24c53e81d3a4087bb61a2baabf74d74ea8dbce6944dab9727860c46358be80029",
-  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e83ddcea14610051578063eff5924f14610171575b600080fd5b34801561005d57600080fd5b5061007c6004803603810190808035906020019092919050505061019c565b604051808581526020018060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100cc5780820151818401526020810190506100b1565b50505050905090810190601f1680156100f95780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b83811015610132578082015181840152602081019050610117565b50505050905090810190601f16801561015f5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561017d57600080fd5b506101866102fc565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561024e5780601f106102235761010080835404028352916020019161024e565b820191906000526020600020905b81548152906001019060200180831161023157829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ec5780601f106102c1576101008083540402835291602001916102ec565b820191906000526020600020905b8154815290600101906020018083116102cf57829003601f168201915b5050505050908060030154905084565b600154815600a165627a7a72305820d6c24c53e81d3a4087bb61a2baabf74d74ea8dbce6944dab9727860c46358be80029",
-  "sourceMap": "28:757:2:-;;;393:136;8:9:-1;5:2;;;30:1;27;20:12;5:2;393:136:2;426:45;436:1;426:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;469:1;426:9;;;:45;;;:::i;:::-;482:39;492:1;482:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;519:1;482:9;;;:39;;;:::i;:::-;28:757;;537:245;657:11;;:14;;;;;;;;;;;;;705:69;;;;;;;;;718:11;705:69;;;;731:13;705:69;;;;746:15;705:69;;;;763:10;705:69;;;682:7;:20;690:11;;682:20;;;;;;;;;;;:92;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;537:245;;;;:::o;28:757::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "28:757:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;266:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;266:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;266:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;361:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;361:23:2;;;;;;;;;;;;;;;;;;;;;;;266:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;361:23::-;;;;:::o",
-  "source": "pragma solidity ^0.4.25;\r\n\r\ncontract ReviewClass {\r\n    // Model a ReviewObject object \r\n    struct ReviewObject {\r\n        uint productID;\r\n        string productName;\r\n        string reviewMessage;\r\n        uint numStars;\r\n    }\r\n\r\n    // Get and set reviews\r\n    mapping(uint => ReviewObject) public reviews;\r\n\r\n    // Counter for the number of reviews\r\n    uint public reviewCount;\r\n\r\n    constructor () public {\r\n        addReview(1, \"Headphone\", \"Great product\", 5);\r\n        addReview(2, \"Watch\", \"Bad product\", 1);\r\n    }\r\n\r\n    function addReview (uint _product_id, string _product_name, string _review_message, uint _num_stars) private {\r\n        reviewCount ++;\r\n        reviews[reviewCount] = ReviewObject(_product_id, _product_name, _review_message, _num_stars);\r\n    }\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"reviews\",\"outputs\":[{\"name\":\"productID\",\"type\":\"uint256\"},{\"name\":\"orderNumber\",\"type\":\"uint256\"},{\"name\":\"productName\",\"type\":\"string\"},{\"name\":\"reviewMessage\",\"type\":\"string\"},{\"name\":\"numStars\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"reviewCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ReviewClass.sol\":\"ReviewClass\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ReviewClass.sol\":{\"keccak256\":\"0x5c5347487a3df377071c20b5f6a54e2bc01cc842ee7eabd18a6aba40deddec37\",\"urls\":[\"bzzr://5a87231e01e815600bda1511cf2ddb7408258b7f00abcae216b0850b704709b2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061009b60016103506040805190810160405280600981526020017f4865616470686f6e6500000000000000000000000000000000000000000000008152506040805190810160405280600d81526020017f47726561742070726f6475637400000000000000000000000000000000000000815250600561012a640100000000026401000000009004565b61012560026103986040805190810160405280600581526020017f57617463680000000000000000000000000000000000000000000000000000008152506040805190810160405280600b81526020017f4261642070726f64756374000000000000000000000000000000000000000000815250600161012a640100000000026401000000009004565b61027f565b60016000815480929190600101919050555060a060405190810160405280868152602001858152602001848152602001838152602001828152506000806001548152602001908152602001600020600082015181600001556020820151816001015560408201518160020190805190602001906101a89291906101da565b5060608201518160030190805190602001906101c59291906101da565b50608082015181600401559050505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061021b57805160ff1916838001178555610249565b82800160010185558215610249579182015b8281111561024857825182559160200191906001019061022d565b5b509050610256919061025a565b5090565b61027c91905b80821115610278576000816000905550600101610260565b5090565b90565b61033b8061028e6000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e83ddcea14610051578063eff5924f14610178575b600080fd5b34801561005d57600080fd5b5061007c600480360381019080803590602001909291905050506101a3565b604051808681526020018581526020018060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b8381101561013857808201518184015260208101905061011d565b50505050905090810190601f1680156101655780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b34801561018457600080fd5b5061018d610309565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561025b5780601f106102305761010080835404028352916020019161025b565b820191906000526020600020905b81548152906001019060200180831161023e57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f95780601f106102ce576101008083540402835291602001916102f9565b820191906000526020600020905b8154815290600101906020018083116102dc57829003601f168201915b5050505050908060040154905085565b600154815600a165627a7a72305820825c117fb30a112e97a2c3ccd821c8045ae213787bbf259d036833206aa0d05b0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e83ddcea14610051578063eff5924f14610178575b600080fd5b34801561005d57600080fd5b5061007c600480360381019080803590602001909291905050506101a3565b604051808681526020018581526020018060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b8381101561013857808201518184015260208101905061011d565b50505050905090810190601f1680156101655780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b34801561018457600080fd5b5061018d610309565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561025b5780601f106102305761010080835404028352916020019161025b565b820191906000526020600020905b81548152906001019060200180831161023e57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f95780601f106102ce576101008083540402835291602001916102f9565b820191906000526020600020905b8154815290600101906020018083116102dc57829003601f168201915b5050505050908060040154905085565b600154815600a165627a7a72305820825c117fb30a112e97a2c3ccd821c8045ae213787bbf259d036833206aa0d05b0029",
+  "sourceMap": "28:829:2:-;;;420:146;8:9:-1;5:2;;;30:1;27;20:12;5:2;420:146:2;453:50;463:1;466:3;453:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;501:1;453:9;;;:50;;;:::i;:::-;514:44;524:1;527:3;514:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;556:1;514:9;;;:44;;;:::i;:::-;28:829;;574:280;714:11;;:14;;;;;;;;;;;;;762:84;;;;;;;;;775:11;762:84;;;;788:13;762:84;;;;803:13;762:84;;;;818:15;762:84;;;;835:10;762:84;;;739:7;:20;747:11;;739:20;;;;;;;;;;;:107;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;574:280;;;;;:::o;28:829::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "28:829:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;293:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;293:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;293:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;293:44:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;388:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;388:23:2;;;;;;;;;;;;;;;;;;;;;;;293:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;388:23::-;;;;:::o",
+  "source": "pragma solidity ^0.4.25;\r\n\r\ncontract ReviewClass {\r\n    // Model a ReviewObject object \r\n    struct ReviewObject {\r\n        uint productID;\r\n        uint orderNumber;\r\n        string productName;\r\n        string reviewMessage;\r\n        uint numStars;\r\n    }\r\n\r\n    // Get and set reviews\r\n    mapping(uint => ReviewObject) public reviews;\r\n\r\n    // Counter for the number of reviews\r\n    uint public reviewCount;\r\n\r\n    constructor () public {\r\n        addReview(1, 848, \"Headphone\", \"Great product\", 5);\r\n        addReview(2, 920, \"Watch\", \"Bad product\", 1);\r\n    }\r\n\r\n    function addReview (uint _product_id, uint _order_number, string _product_name, string _review_message, uint _num_stars) private {\r\n        reviewCount ++;\r\n        reviews[reviewCount] = ReviewObject(_product_id, _order_number, _product_name, _review_message, _num_stars);\r\n    }\r\n}\r\n",
   "sourcePath": "C:\\Users\\divam\\Repositories\\The-Package\\contracts\\ReviewClass.sol",
   "ast": {
     "absolutePath": "project:/contracts/ReviewClass.sol",
     "exportedSymbols": {
       "ReviewClass": [
-        214
+        221
       ]
     },
-    "id": 215,
+    "id": 222,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -87,23 +91,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 214,
+        "id": 221,
         "linearizedBaseContracts": [
-          214
+          221
         ],
         "name": "ReviewClass",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "ReviewClass.ReviewObject",
-            "id": 163,
+            "id": 165,
             "members": [
               {
                 "constant": false,
                 "id": 156,
                 "name": "productID",
                 "nodeType": "VariableDeclaration",
-                "scope": 163,
+                "scope": 165,
                 "src": "124:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -127,24 +131,24 @@
               {
                 "constant": false,
                 "id": 158,
-                "name": "productName",
+                "name": "orderNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 163,
-                "src": "149:18:2",
+                "scope": 165,
+                "src": "149:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
                 },
                 "typeName": {
                   "id": 157,
-                  "name": "string",
+                  "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "149:6:2",
+                  "src": "149:4:2",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   }
                 },
                 "value": null,
@@ -153,10 +157,10 @@
               {
                 "constant": false,
                 "id": 160,
-                "name": "reviewMessage",
+                "name": "productName",
                 "nodeType": "VariableDeclaration",
-                "scope": 163,
-                "src": "178:20:2",
+                "scope": 165,
+                "src": "176:18:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -167,7 +171,7 @@
                   "id": 159,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "178:6:2",
+                  "src": "176:6:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -179,10 +183,36 @@
               {
                 "constant": false,
                 "id": 162,
+                "name": "reviewMessage",
+                "nodeType": "VariableDeclaration",
+                "scope": 165,
+                "src": "205:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 161,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "205:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 164,
                 "name": "numStars",
                 "nodeType": "VariableDeclaration",
-                "scope": 163,
-                "src": "209:13:2",
+                "scope": 165,
+                "src": "236:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -190,10 +220,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 161,
+                  "id": 163,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "209:4:2",
+                  "src": "236:4:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -205,50 +235,50 @@
             ],
             "name": "ReviewObject",
             "nodeType": "StructDefinition",
-            "scope": 214,
-            "src": "93:137:2",
+            "scope": 221,
+            "src": "93:164:2",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 167,
+            "id": 169,
             "name": "reviews",
             "nodeType": "VariableDeclaration",
-            "scope": 214,
-            "src": "266:44:2",
+            "scope": 221,
+            "src": "293:44:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$163_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$165_storage_$",
               "typeString": "mapping(uint256 => struct ReviewClass.ReviewObject)"
             },
             "typeName": {
-              "id": 166,
+              "id": 168,
               "keyType": {
-                "id": 164,
+                "id": 166,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "274:4:2",
+                "src": "301:4:2",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "266:29:2",
+              "src": "293:29:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$163_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$165_storage_$",
                 "typeString": "mapping(uint256 => struct ReviewClass.ReviewObject)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 165,
+                "id": 167,
                 "name": "ReviewObject",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 163,
-                "src": "282:12:2",
+                "referencedDeclaration": 165,
+                "src": "309:12:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_ReviewObject_$163_storage_ptr",
+                  "typeIdentifier": "t_struct$_ReviewObject_$165_storage_ptr",
                   "typeString": "struct ReviewClass.ReviewObject"
                 }
               }
@@ -258,11 +288,11 @@
           },
           {
             "constant": false,
-            "id": 169,
+            "id": 171,
             "name": "reviewCount",
             "nodeType": "VariableDeclaration",
-            "scope": 214,
-            "src": "361:23:2",
+            "scope": 221,
+            "src": "388:23:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -270,10 +300,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 168,
+              "id": 170,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "361:4:2",
+              "src": "388:4:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -284,9 +314,9 @@
           },
           {
             "body": {
-              "id": 186,
+              "id": 190,
               "nodeType": "Block",
-              "src": "415:114:2",
+              "src": "442:124:2",
               "statements": [
                 {
                   "expression": {
@@ -295,14 +325,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 173,
+                        "id": 175,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "436:1:2",
+                        "src": "463:1:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1_by_1",
@@ -312,15 +342,33 @@
                       },
                       {
                         "argumentTypes": null,
+                        "hexValue": "383438",
+                        "id": 176,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "466:3:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_848_by_1",
+                          "typeString": "int_const 848"
+                        },
+                        "value": "848"
+                      },
+                      {
+                        "argumentTypes": null,
                         "hexValue": "4865616470686f6e65",
-                        "id": 174,
+                        "id": 177,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "439:11:2",
+                        "src": "471:11:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_81430d4a52ce7a2382cf1665becde1f58a0f2e138a3f211352b7e0debf039350",
@@ -331,14 +379,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "47726561742070726f64756374",
-                        "id": 175,
+                        "id": 178,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "452:15:2",
+                        "src": "484:15:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_02003d4feddf0946d252a3ffb2ec6907a45f14a021ea6276866b4c74b4a2f1ff",
@@ -349,14 +397,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "35",
-                        "id": 176,
+                        "id": 179,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "469:1:2",
+                        "src": "501:1:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_5_by_1",
@@ -372,6 +420,10 @@
                           "typeString": "int_const 1"
                         },
                         {
+                          "typeIdentifier": "t_rational_848_by_1",
+                          "typeString": "int_const 848"
+                        },
+                        {
                           "typeIdentifier": "t_stringliteral_81430d4a52ce7a2382cf1665becde1f58a0f2e138a3f211352b7e0debf039350",
                           "typeString": "literal_string \"Headphone\""
                         },
@@ -384,18 +436,18 @@
                           "typeString": "int_const 5"
                         }
                       ],
-                      "id": 172,
+                      "id": 174,
                       "name": "addReview",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 213,
-                      "src": "426:9:2",
+                      "referencedDeclaration": 220,
+                      "src": "453:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256,string memory,string memory,uint256)"
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,string memory,string memory,uint256)"
                       }
                     },
-                    "id": 177,
+                    "id": 180,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -403,15 +455,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "426:45:2",
+                    "src": "453:50:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 178,
+                  "id": 181,
                   "nodeType": "ExpressionStatement",
-                  "src": "426:45:2"
+                  "src": "453:50:2"
                 },
                 {
                   "expression": {
@@ -420,14 +472,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "32",
-                        "id": 180,
+                        "id": 183,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "492:1:2",
+                        "src": "524:1:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_2_by_1",
@@ -437,15 +489,33 @@
                       },
                       {
                         "argumentTypes": null,
+                        "hexValue": "393230",
+                        "id": 184,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "527:3:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_920_by_1",
+                          "typeString": "int_const 920"
+                        },
+                        "value": "920"
+                      },
+                      {
+                        "argumentTypes": null,
                         "hexValue": "5761746368",
-                        "id": 181,
+                        "id": 185,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "495:7:2",
+                        "src": "532:7:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_ef2441768a6041871a0e6998f156688b152acd6091e9ac6c1f6790c246b2eba0",
@@ -456,14 +526,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4261642070726f64756374",
-                        "id": 182,
+                        "id": 186,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "504:13:2",
+                        "src": "541:13:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_2f60bbc7cc0b9f1b9e9e3004fefcfa254e7b63701297cd9b9ef93f11633adbf3",
@@ -474,14 +544,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 183,
+                        "id": 187,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "519:1:2",
+                        "src": "556:1:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1_by_1",
@@ -497,6 +567,10 @@
                           "typeString": "int_const 2"
                         },
                         {
+                          "typeIdentifier": "t_rational_920_by_1",
+                          "typeString": "int_const 920"
+                        },
+                        {
                           "typeIdentifier": "t_stringliteral_ef2441768a6041871a0e6998f156688b152acd6091e9ac6c1f6790c246b2eba0",
                           "typeString": "literal_string \"Watch\""
                         },
@@ -509,18 +583,18 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 179,
+                      "id": 182,
                       "name": "addReview",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 213,
-                      "src": "482:9:2",
+                      "referencedDeclaration": 220,
+                      "src": "514:9:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256,string memory,string memory,uint256)"
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,string memory,string memory,uint256)"
                       }
                     },
-                    "id": 184,
+                    "id": 188,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -528,20 +602,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "482:39:2",
+                    "src": "514:44:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 185,
+                  "id": 189,
                   "nodeType": "ExpressionStatement",
-                  "src": "482:39:2"
+                  "src": "514:44:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 187,
+            "id": 191,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -549,34 +623,34 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 170,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "405:2:2"
+              "src": "432:2:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 171,
+              "id": 173,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "415:0:2"
+              "src": "442:0:2"
             },
-            "scope": 214,
-            "src": "393:136:2",
+            "scope": 221,
+            "src": "420:146:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 212,
+              "id": 219,
               "nodeType": "Block",
-              "src": "646:136:2",
+              "src": "703:151:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 199,
+                    "id": 205,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -584,15 +658,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "++",
                     "prefix": false,
-                    "src": "657:14:2",
+                    "src": "714:14:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 198,
+                      "id": 204,
                       "name": "reviewCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 169,
-                      "src": "657:11:2",
+                      "referencedDeclaration": 171,
+                      "src": "714:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -603,14 +677,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 200,
+                  "id": 206,
                   "nodeType": "ExpressionStatement",
-                  "src": "657:14:2"
+                  "src": "714:14:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 210,
+                    "id": 217,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -619,26 +693,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 201,
+                        "id": 207,
                         "name": "reviews",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 167,
-                        "src": "682:7:2",
+                        "referencedDeclaration": 169,
+                        "src": "739:7:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$163_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ReviewObject_$165_storage_$",
                           "typeString": "mapping(uint256 => struct ReviewClass.ReviewObject storage ref)"
                         }
                       },
-                      "id": 203,
+                      "id": 209,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 202,
+                        "id": 208,
                         "name": "reviewCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 169,
-                        "src": "690:11:2",
+                        "referencedDeclaration": 171,
+                        "src": "747:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -649,9 +723,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "682:20:2",
+                      "src": "739:20:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ReviewObject_$163_storage",
+                        "typeIdentifier": "t_struct$_ReviewObject_$165_storage",
                         "typeString": "struct ReviewClass.ReviewObject storage ref"
                       }
                     },
@@ -662,12 +736,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 205,
+                          "id": 211,
                           "name": "_product_id",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 189,
-                          "src": "718:11:2",
+                          "referencedDeclaration": 193,
+                          "src": "775:11:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -675,38 +749,51 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 206,
-                          "name": "_product_name",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 191,
-                          "src": "731:13:2",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 207,
-                          "name": "_review_message",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 193,
-                          "src": "746:15:2",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 208,
-                          "name": "_num_stars",
+                          "id": 212,
+                          "name": "_order_number",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 195,
-                          "src": "763:10:2",
+                          "src": "788:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 213,
+                          "name": "_product_name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 197,
+                          "src": "803:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 214,
+                          "name": "_review_message",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 199,
+                          "src": "818:15:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 215,
+                          "name": "_num_stars",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 201,
+                          "src": "835:10:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -715,6 +802,10 @@
                       ],
                       "expression": {
                         "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
                           {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -732,18 +823,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 204,
+                        "id": 210,
                         "name": "ReviewObject",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 163,
-                        "src": "705:12:2",
+                        "referencedDeclaration": 165,
+                        "src": "762:12:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_ReviewObject_$163_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_ReviewObject_$165_storage_ptr_$",
                           "typeString": "type(struct ReviewClass.ReviewObject storage pointer)"
                         }
                       },
-                      "id": 209,
+                      "id": 216,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -751,26 +842,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "705:69:2",
+                      "src": "762:84:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ReviewObject_$163_memory",
+                        "typeIdentifier": "t_struct$_ReviewObject_$165_memory",
                         "typeString": "struct ReviewClass.ReviewObject memory"
                       }
                     },
-                    "src": "682:92:2",
+                    "src": "739:107:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ReviewObject_$163_storage",
+                      "typeIdentifier": "t_struct$_ReviewObject_$165_storage",
                       "typeString": "struct ReviewClass.ReviewObject storage ref"
                     }
                   },
-                  "id": 211,
+                  "id": 218,
                   "nodeType": "ExpressionStatement",
-                  "src": "682:92:2"
+                  "src": "739:107:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 213,
+            "id": 220,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -778,16 +869,16 @@
             "name": "addReview",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 196,
+              "id": 202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 189,
+                  "id": 193,
                   "name": "_product_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 213,
-                  "src": "557:16:2",
+                  "scope": 220,
+                  "src": "594:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -795,10 +886,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 188,
+                    "id": 192,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "557:4:2",
+                    "src": "594:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -809,63 +900,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 191,
-                  "name": "_product_name",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 213,
-                  "src": "575:20:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 190,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "575:6:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 193,
-                  "name": "_review_message",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 213,
-                  "src": "597:22:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 192,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "597:6:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
                   "id": 195,
-                  "name": "_num_stars",
+                  "name": "_order_number",
                   "nodeType": "VariableDeclaration",
-                  "scope": 213,
-                  "src": "621:15:2",
+                  "scope": 220,
+                  "src": "612:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -876,7 +915,85 @@
                     "id": 194,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "621:4:2",
+                    "src": "612:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 197,
+                  "name": "_product_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 220,
+                  "src": "632:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 196,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "632:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 199,
+                  "name": "_review_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 220,
+                  "src": "654:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 198,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "654:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "_num_stars",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 220,
+                  "src": "678:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "678:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -886,34 +1003,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "556:81:2"
+              "src": "593:101:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 197,
+              "id": 203,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "646:0:2"
+              "src": "703:0:2"
             },
-            "scope": 214,
-            "src": "537:245:2",
+            "scope": 221,
+            "src": "574:280:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "private"
           }
         ],
-        "scope": 215,
-        "src": "28:757:2"
+        "scope": 222,
+        "src": "28:829:2"
       }
     ],
-    "src": "0:787:2"
+    "src": "0:859:2"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/ReviewClass.sol",
       "exportedSymbols": {
         "ReviewClass": [
-          214
+          221
         ]
       }
     },
@@ -943,17 +1060,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            214
+            221
           ],
           "name": "ReviewClass",
-          "scope": 215
+          "scope": 222
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "ReviewClass.ReviewObject",
               "name": "ReviewObject",
-              "scope": 214,
+              "scope": 221,
               "visibility": "public"
             },
             "children": [
@@ -961,7 +1078,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "productID",
-                  "scope": 163,
+                  "scope": 165,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -986,34 +1103,34 @@
               {
                 "attributes": {
                   "constant": false,
-                  "name": "productName",
-                  "scope": 163,
+                  "name": "orderNumber",
+                  "scope": 165,
                   "stateVariable": false,
                   "storageLocation": "default",
-                  "type": "string",
+                  "type": "uint256",
                   "value": null,
                   "visibility": "internal"
                 },
                 "children": [
                   {
                     "attributes": {
-                      "name": "string",
-                      "type": "string"
+                      "name": "uint",
+                      "type": "uint256"
                     },
                     "id": 157,
                     "name": "ElementaryTypeName",
-                    "src": "149:6:2"
+                    "src": "149:4:2"
                   }
                 ],
                 "id": 158,
                 "name": "VariableDeclaration",
-                "src": "149:18:2"
+                "src": "149:16:2"
               },
               {
                 "attributes": {
                   "constant": false,
-                  "name": "reviewMessage",
-                  "scope": 163,
+                  "name": "productName",
+                  "scope": 165,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1028,18 +1145,44 @@
                     },
                     "id": 159,
                     "name": "ElementaryTypeName",
-                    "src": "178:6:2"
+                    "src": "176:6:2"
                   }
                 ],
                 "id": 160,
                 "name": "VariableDeclaration",
-                "src": "178:20:2"
+                "src": "176:18:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "reviewMessage",
+                  "scope": 165,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 161,
+                    "name": "ElementaryTypeName",
+                    "src": "205:6:2"
+                  }
+                ],
+                "id": 162,
+                "name": "VariableDeclaration",
+                "src": "205:20:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "numStars",
-                  "scope": 163,
+                  "scope": 165,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1052,25 +1195,25 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 161,
+                    "id": 163,
                     "name": "ElementaryTypeName",
-                    "src": "209:4:2"
+                    "src": "236:4:2"
                   }
                 ],
-                "id": 162,
+                "id": 164,
                 "name": "VariableDeclaration",
-                "src": "209:13:2"
+                "src": "236:13:2"
               }
             ],
-            "id": 163,
+            "id": 165,
             "name": "StructDefinition",
-            "src": "93:137:2"
+            "src": "93:164:2"
           },
           {
             "attributes": {
               "constant": false,
               "name": "reviews",
-              "scope": 214,
+              "scope": 221,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => struct ReviewClass.ReviewObject)",
@@ -1088,36 +1231,36 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 164,
+                    "id": 166,
                     "name": "ElementaryTypeName",
-                    "src": "274:4:2"
+                    "src": "301:4:2"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "ReviewObject",
-                      "referencedDeclaration": 163,
+                      "referencedDeclaration": 165,
                       "type": "struct ReviewClass.ReviewObject"
                     },
-                    "id": 165,
+                    "id": 167,
                     "name": "UserDefinedTypeName",
-                    "src": "282:12:2"
+                    "src": "309:12:2"
                   }
                 ],
-                "id": 166,
+                "id": 168,
                 "name": "Mapping",
-                "src": "266:29:2"
+                "src": "293:29:2"
               }
             ],
-            "id": 167,
+            "id": 169,
             "name": "VariableDeclaration",
-            "src": "266:44:2"
+            "src": "293:44:2"
           },
           {
             "attributes": {
               "constant": false,
               "name": "reviewCount",
-              "scope": 214,
+              "scope": 221,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1130,14 +1273,14 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 168,
+                "id": 170,
                 "name": "ElementaryTypeName",
-                "src": "361:4:2"
+                "src": "388:4:2"
               }
             ],
-            "id": 169,
+            "id": 171,
             "name": "VariableDeclaration",
-            "src": "361:23:2"
+            "src": "388:23:2"
           },
           {
             "attributes": {
@@ -1150,7 +1293,7 @@
               ],
               "name": "",
               "payable": false,
-              "scope": 214,
+              "scope": 221,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1163,9 +1306,9 @@
                   ]
                 },
                 "children": [],
-                "id": 170,
+                "id": 172,
                 "name": "ParameterList",
-                "src": "405:2:2"
+                "src": "432:2:2"
               },
               {
                 "attributes": {
@@ -1174,9 +1317,9 @@
                   ]
                 },
                 "children": [],
-                "id": 171,
+                "id": 173,
                 "name": "ParameterList",
-                "src": "415:0:2"
+                "src": "442:0:2"
               },
               {
                 "children": [
@@ -1205,6 +1348,10 @@
                                   "typeString": "int_const 1"
                                 },
                                 {
+                                  "typeIdentifier": "t_rational_848_by_1",
+                                  "typeString": "int_const 848"
+                                },
+                                {
                                   "typeIdentifier": "t_stringliteral_81430d4a52ce7a2382cf1665becde1f58a0f2e138a3f211352b7e0debf039350",
                                   "typeString": "literal_string \"Headphone\""
                                 },
@@ -1220,13 +1367,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 213,
-                              "type": "function (uint256,string memory,string memory,uint256)",
+                              "referencedDeclaration": 220,
+                              "type": "function (uint256,uint256,string memory,string memory,uint256)",
                               "value": "addReview"
                             },
-                            "id": 172,
+                            "id": 174,
                             "name": "Identifier",
-                            "src": "426:9:2"
+                            "src": "453:9:2"
                           },
                           {
                             "attributes": {
@@ -1241,9 +1388,26 @@
                               "type": "int_const 1",
                               "value": "1"
                             },
-                            "id": 173,
+                            "id": 175,
                             "name": "Literal",
-                            "src": "436:1:2"
+                            "src": "463:1:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "383438",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 848",
+                              "value": "848"
+                            },
+                            "id": 176,
+                            "name": "Literal",
+                            "src": "466:3:2"
                           },
                           {
                             "attributes": {
@@ -1258,9 +1422,9 @@
                               "type": "literal_string \"Headphone\"",
                               "value": "Headphone"
                             },
-                            "id": 174,
+                            "id": 177,
                             "name": "Literal",
-                            "src": "439:11:2"
+                            "src": "471:11:2"
                           },
                           {
                             "attributes": {
@@ -1275,9 +1439,9 @@
                               "type": "literal_string \"Great product\"",
                               "value": "Great product"
                             },
-                            "id": 175,
+                            "id": 178,
                             "name": "Literal",
-                            "src": "452:15:2"
+                            "src": "484:15:2"
                           },
                           {
                             "attributes": {
@@ -1292,19 +1456,19 @@
                               "type": "int_const 5",
                               "value": "5"
                             },
-                            "id": 176,
+                            "id": 179,
                             "name": "Literal",
-                            "src": "469:1:2"
+                            "src": "501:1:2"
                           }
                         ],
-                        "id": 177,
+                        "id": 180,
                         "name": "FunctionCall",
-                        "src": "426:45:2"
+                        "src": "453:50:2"
                       }
                     ],
-                    "id": 178,
+                    "id": 181,
                     "name": "ExpressionStatement",
-                    "src": "426:45:2"
+                    "src": "453:50:2"
                   },
                   {
                     "children": [
@@ -1331,6 +1495,10 @@
                                   "typeString": "int_const 2"
                                 },
                                 {
+                                  "typeIdentifier": "t_rational_920_by_1",
+                                  "typeString": "int_const 920"
+                                },
+                                {
                                   "typeIdentifier": "t_stringliteral_ef2441768a6041871a0e6998f156688b152acd6091e9ac6c1f6790c246b2eba0",
                                   "typeString": "literal_string \"Watch\""
                                 },
@@ -1346,13 +1514,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 213,
-                              "type": "function (uint256,string memory,string memory,uint256)",
+                              "referencedDeclaration": 220,
+                              "type": "function (uint256,uint256,string memory,string memory,uint256)",
                               "value": "addReview"
                             },
-                            "id": 179,
+                            "id": 182,
                             "name": "Identifier",
-                            "src": "482:9:2"
+                            "src": "514:9:2"
                           },
                           {
                             "attributes": {
@@ -1367,9 +1535,26 @@
                               "type": "int_const 2",
                               "value": "2"
                             },
-                            "id": 180,
+                            "id": 183,
                             "name": "Literal",
-                            "src": "492:1:2"
+                            "src": "524:1:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "393230",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 920",
+                              "value": "920"
+                            },
+                            "id": 184,
+                            "name": "Literal",
+                            "src": "527:3:2"
                           },
                           {
                             "attributes": {
@@ -1384,9 +1569,9 @@
                               "type": "literal_string \"Watch\"",
                               "value": "Watch"
                             },
-                            "id": 181,
+                            "id": 185,
                             "name": "Literal",
-                            "src": "495:7:2"
+                            "src": "532:7:2"
                           },
                           {
                             "attributes": {
@@ -1401,9 +1586,9 @@
                               "type": "literal_string \"Bad product\"",
                               "value": "Bad product"
                             },
-                            "id": 182,
+                            "id": 186,
                             "name": "Literal",
-                            "src": "504:13:2"
+                            "src": "541:13:2"
                           },
                           {
                             "attributes": {
@@ -1418,29 +1603,29 @@
                               "type": "int_const 1",
                               "value": "1"
                             },
-                            "id": 183,
+                            "id": 187,
                             "name": "Literal",
-                            "src": "519:1:2"
+                            "src": "556:1:2"
                           }
                         ],
-                        "id": 184,
+                        "id": 188,
                         "name": "FunctionCall",
-                        "src": "482:39:2"
+                        "src": "514:44:2"
                       }
                     ],
-                    "id": 185,
+                    "id": 189,
                     "name": "ExpressionStatement",
-                    "src": "482:39:2"
+                    "src": "514:44:2"
                   }
                 ],
-                "id": 186,
+                "id": 190,
                 "name": "Block",
-                "src": "415:114:2"
+                "src": "442:124:2"
               }
             ],
-            "id": 187,
+            "id": 191,
             "name": "FunctionDefinition",
-            "src": "393:136:2"
+            "src": "420:146:2"
           },
           {
             "attributes": {
@@ -1453,7 +1638,7 @@
               ],
               "name": "addReview",
               "payable": false,
-              "scope": 214,
+              "scope": 221,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "private"
@@ -1465,7 +1650,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_product_id",
-                      "scope": 213,
+                      "scope": 220,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1478,72 +1663,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 188,
-                        "name": "ElementaryTypeName",
-                        "src": "557:4:2"
-                      }
-                    ],
-                    "id": 189,
-                    "name": "VariableDeclaration",
-                    "src": "557:16:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_product_name",
-                      "scope": 213,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "string",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
-                        "id": 190,
-                        "name": "ElementaryTypeName",
-                        "src": "575:6:2"
-                      }
-                    ],
-                    "id": 191,
-                    "name": "VariableDeclaration",
-                    "src": "575:20:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_review_message",
-                      "scope": 213,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "string",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
                         "id": 192,
                         "name": "ElementaryTypeName",
-                        "src": "597:6:2"
+                        "src": "594:4:2"
                       }
                     ],
                     "id": 193,
                     "name": "VariableDeclaration",
-                    "src": "597:22:2"
+                    "src": "594:16:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "_num_stars",
-                      "scope": 213,
+                      "name": "_order_number",
+                      "scope": 220,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1558,17 +1691,95 @@
                         },
                         "id": 194,
                         "name": "ElementaryTypeName",
-                        "src": "621:4:2"
+                        "src": "612:4:2"
                       }
                     ],
                     "id": 195,
                     "name": "VariableDeclaration",
-                    "src": "621:15:2"
+                    "src": "612:18:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_product_name",
+                      "scope": 220,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 196,
+                        "name": "ElementaryTypeName",
+                        "src": "632:6:2"
+                      }
+                    ],
+                    "id": 197,
+                    "name": "VariableDeclaration",
+                    "src": "632:20:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_review_message",
+                      "scope": 220,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 198,
+                        "name": "ElementaryTypeName",
+                        "src": "654:6:2"
+                      }
+                    ],
+                    "id": 199,
+                    "name": "VariableDeclaration",
+                    "src": "654:22:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_num_stars",
+                      "scope": 220,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 200,
+                        "name": "ElementaryTypeName",
+                        "src": "678:4:2"
+                      }
+                    ],
+                    "id": 201,
+                    "name": "VariableDeclaration",
+                    "src": "678:15:2"
                   }
                 ],
-                "id": 196,
+                "id": 202,
                 "name": "ParameterList",
-                "src": "556:81:2"
+                "src": "593:101:2"
               },
               {
                 "attributes": {
@@ -1577,9 +1788,9 @@
                   ]
                 },
                 "children": [],
-                "id": 197,
+                "id": 203,
                 "name": "ParameterList",
-                "src": "646:0:2"
+                "src": "703:0:2"
               },
               {
                 "children": [
@@ -1603,23 +1814,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 169,
+                              "referencedDeclaration": 171,
                               "type": "uint256",
                               "value": "reviewCount"
                             },
-                            "id": 198,
+                            "id": 204,
                             "name": "Identifier",
-                            "src": "657:11:2"
+                            "src": "714:11:2"
                           }
                         ],
-                        "id": 199,
+                        "id": 205,
                         "name": "UnaryOperation",
-                        "src": "657:14:2"
+                        "src": "714:14:2"
                       }
                     ],
-                    "id": 200,
+                    "id": 206,
                     "name": "ExpressionStatement",
-                    "src": "657:14:2"
+                    "src": "714:14:2"
                   },
                   {
                     "children": [
@@ -1650,13 +1861,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 167,
+                                  "referencedDeclaration": 169,
                                   "type": "mapping(uint256 => struct ReviewClass.ReviewObject storage ref)",
                                   "value": "reviews"
                                 },
-                                "id": 201,
+                                "id": 207,
                                 "name": "Identifier",
-                                "src": "682:7:2"
+                                "src": "739:7:2"
                               },
                               {
                                 "attributes": {
@@ -1664,18 +1875,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 169,
+                                  "referencedDeclaration": 171,
                                   "type": "uint256",
                                   "value": "reviewCount"
                                 },
-                                "id": 202,
+                                "id": 208,
                                 "name": "Identifier",
-                                "src": "690:11:2"
+                                "src": "747:11:2"
                               }
                             ],
-                            "id": 203,
+                            "id": 209,
                             "name": "IndexAccess",
-                            "src": "682:20:2"
+                            "src": "739:20:2"
                           },
                           {
                             "attributes": {
@@ -1700,6 +1911,10 @@
                                       "typeString": "uint256"
                                     },
                                     {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
                                       "typeIdentifier": "t_string_memory_ptr",
                                       "typeString": "string memory"
                                     },
@@ -1715,41 +1930,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 163,
+                                  "referencedDeclaration": 165,
                                   "type": "type(struct ReviewClass.ReviewObject storage pointer)",
                                   "value": "ReviewObject"
                                 },
-                                "id": 204,
+                                "id": 210,
                                 "name": "Identifier",
-                                "src": "705:12:2"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 189,
-                                  "type": "uint256",
-                                  "value": "_product_id"
-                                },
-                                "id": 205,
-                                "name": "Identifier",
-                                "src": "718:11:2"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 191,
-                                  "type": "string memory",
-                                  "value": "_product_name"
-                                },
-                                "id": 206,
-                                "name": "Identifier",
-                                "src": "731:13:2"
+                                "src": "762:12:2"
                               },
                               {
                                 "attributes": {
@@ -1758,12 +1945,12 @@
                                     null
                                   ],
                                   "referencedDeclaration": 193,
-                                  "type": "string memory",
-                                  "value": "_review_message"
+                                  "type": "uint256",
+                                  "value": "_product_id"
                                 },
-                                "id": 207,
+                                "id": 211,
                                 "name": "Identifier",
-                                "src": "746:15:2"
+                                "src": "775:11:2"
                               },
                               {
                                 "attributes": {
@@ -1773,46 +1960,88 @@
                                   ],
                                   "referencedDeclaration": 195,
                                   "type": "uint256",
+                                  "value": "_order_number"
+                                },
+                                "id": 212,
+                                "name": "Identifier",
+                                "src": "788:13:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 197,
+                                  "type": "string memory",
+                                  "value": "_product_name"
+                                },
+                                "id": 213,
+                                "name": "Identifier",
+                                "src": "803:13:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 199,
+                                  "type": "string memory",
+                                  "value": "_review_message"
+                                },
+                                "id": 214,
+                                "name": "Identifier",
+                                "src": "818:15:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 201,
+                                  "type": "uint256",
                                   "value": "_num_stars"
                                 },
-                                "id": 208,
+                                "id": 215,
                                 "name": "Identifier",
-                                "src": "763:10:2"
+                                "src": "835:10:2"
                               }
                             ],
-                            "id": 209,
+                            "id": 216,
                             "name": "FunctionCall",
-                            "src": "705:69:2"
+                            "src": "762:84:2"
                           }
                         ],
-                        "id": 210,
+                        "id": 217,
                         "name": "Assignment",
-                        "src": "682:92:2"
+                        "src": "739:107:2"
                       }
                     ],
-                    "id": 211,
+                    "id": 218,
                     "name": "ExpressionStatement",
-                    "src": "682:92:2"
+                    "src": "739:107:2"
                   }
                 ],
-                "id": 212,
+                "id": 219,
                 "name": "Block",
-                "src": "646:136:2"
+                "src": "703:151:2"
               }
             ],
-            "id": 213,
+            "id": 220,
             "name": "FunctionDefinition",
-            "src": "537:245:2"
+            "src": "574:280:2"
           }
         ],
-        "id": 214,
+        "id": 221,
         "name": "ContractDefinition",
-        "src": "28:757:2"
+        "src": "28:829:2"
       }
     ],
-    "id": 215,
+    "id": 222,
     "name": "SourceUnit",
-    "src": "0:787:2"
+    "src": "0:859:2"
   },
   "compiler": {
     "name": "solc",
@@ -1822,12 +2051,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x338b38586716dfd53EAfF35162B1Ef3aD2De2ED7",
-      "transactionHash": "0x61dd36ca0eda10505175efe5003e1b0dc0b7544b56923a80fedb522f9b014610"
+      "address": "0x18D4C2a48ED087e81F1fdF3702e5c7e5C8ebc3A9",
+      "transactionHash": "0x48794c3a34717088e248d208db24d82827f6cfb266d101080ce9495cd0081707"
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-02-12T05:36:20.248Z",
+  "updatedAt": "2023-02-12T05:59:09.673Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

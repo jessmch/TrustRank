@@ -58,12 +58,13 @@ App = {
       for (var i = 1; i <= reviewCount; i++) {
         reviewInstance.reviews(i).then(function(review) {
           var productID = review[0];
-          var productName = review[1];
-          var reviewMessage = review[2];
-          var numStars = review[3];
+          var orderNumber = review[1];
+          var productName = review[2];
+          var reviewMessage = review[3];
+          var numStars = review[4];
 
           // Render candidate Result
-          var reviewDisplayTemplate = "<tr><th>" + productID + "</th><td>" + productName + "</td><td>" + reviewMessage + "</td><td>" + numStars +"</td></tr>"
+          var reviewDisplayTemplate = "<tr><th>" + productID + "</th><td>" + orderNumber + "</td><td>" + productName + "</td><td>" + reviewMessage + "</td><td>" + numStars +"</td></tr>"
           reviewListDisplay.append(reviewDisplayTemplate);
         });
       }

@@ -17,15 +17,17 @@ contract("ReviewClass", function(accounts) {
       return reviewClassInstance.reviews(1);
     }).then(function(review) {
       assert.equal(review[0], 1, "contains the correct productID");
-      assert.equal(review[1], "Headphone", "contains the correct productName");
-      assert.equal(review[2], "Great product", "contains the correct reviewMessage");
-      assert.equal(review[3], 5, "contains the correct numStars");
+      assert.equal(review[1], 848, "contains the correct orderNumber");
+      assert.equal(review[2], "Headphone", "contains the correct productName");
+      assert.equal(review[3], "Great product", "contains the correct reviewMessage");
+      assert.equal(review[4], 5, "contains the correct numStars");
       return reviewClassInstance.reviews(2);
     }).then(function(review) {
       assert.equal(review[0], 2, "contains the correct productID");
-      assert.equal(review[1], "Watch", "contains the correct productName");
-      assert.equal(review[2], "Bad product", "contains the correct reviewMessage");
-      assert.equal(review[3], 1, "contains the correct numStars");
+      assert.equal(review[1], 920, "contains the correct orderNumber");
+      assert.equal(review[2], "Watch", "contains the correct productName");
+      assert.equal(review[3], "Bad product", "contains the correct reviewMessage");
+      assert.equal(review[4], 1, "contains the correct numStars");
     });
   });
 });
