@@ -1,15 +1,12 @@
 
-# Election - DAPP Tutorial
-Build your first decentralized application, or Dapp, on the Ethereum Network with this tutorial!
+# TrustRank - Authentic Reviews
+In this project, we let users enter the product information they have bought from a store, and they will be approved to upload their review to the website as long as they can provide a proof of purchase, which will be automatically verified using our smart contract.
 
-**Full Free Video Tutorial:**
-https://youtu.be/3681ZYbDSSk
-
-
-Follow the steps below to download, install, and run this project.
+**Full Demo:**
+https://youtu.be/Exi922e-ZK4
 
 ## Dependencies
-Install these prerequisites to follow along with the tutorial. See free video tutorial or a full explanation of each prerequisite.
+The following prerequisites are needed to run the demo.
 - NPM: https://nodejs.org
 - Truffle: https://github.com/trufflesuite/truffle
 - Ganache: http://truffleframework.com/ganache/
@@ -17,7 +14,7 @@ Install these prerequisites to follow along with the tutorial. See free video tu
 
 
 ## Step 1. Clone the project
-`git clone https://github.com/dappuniversity/election`
+`git clone https://github.com/jessmch/TrustRank`
 
 ## Step 2. Install dependencies
 ```
@@ -25,22 +22,17 @@ $ cd election
 $ npm install
 ```
 ## Step 3. Start Ganache
-Open the Ganache GUI client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.
 
-
-## Step 4. Compile & Deploy Election Smart Contract
+## Step 4. Compile & Deploy Smart Contract
 `$ truffle migrate --reset`
-You must migrate the election smart contract each time your restart ganache.
+(You must migrate the smart contract each time your restart ganache)
 
 ## Step 5. Configure Metamask
-See free video tutorial for full explanation of these steps:
 - Unlock Metamask
-- Connect metamask to your local Etherum blockchain provided by Ganache.
-- Import an account provided by ganache.
+- Connect metamask to your local Etherum blockchain provided by Ganache (RPC Server)
+- Import an account provided by ganache using private key
 
 ## Step 6. Run the Front End Application
 `$ npm run dev`
 Visit this URL in your browser: http://localhost:3000
-
-If you get stuck, please reference the free video tutorial.
 
