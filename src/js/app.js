@@ -62,9 +62,14 @@ App = {
           var productName = review[2];
           var reviewMessage = review[3];
           var numStars = review[4];
-
+          
           // Render candidate Result
-          var reviewDisplayTemplate = "<tr><th>" + productID + "</th><td>" + orderNumber + "</td><td>" + productName + "</td><td>" + reviewMessage + "</td><td>" + numStars +"</td></tr>"
+          var stars = "<span>"
+          for (var j = 1; j <= numStars; j++) {
+            stars += "⭐️"
+          }
+          stars += "</span>"
+          var reviewDisplayTemplate = "<tr><th>" + productID + "</th><td>" + orderNumber + "</td><td>" + productName + "</td><td>" + reviewMessage + "</td><td>" + stars + "</td></tr>"
           reviewListDisplay.append(reviewDisplayTemplate);
         });
       }
