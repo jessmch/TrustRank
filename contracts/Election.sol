@@ -5,7 +5,7 @@ contract Election {
     struct Candidate {
         uint id;
         string name;
-        uint voteCount;
+        string voteCount;
     }
 
     // Store accounts that have voted
