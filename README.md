@@ -34,5 +34,6 @@ $ npm install
 
 ## Step 6. Run the Front End Application
 `$ npm run dev`
-Visit this URL in your browser: http://localhost:3000
+
+Then, visit this URL in your browser: http://localhost:3000
 
