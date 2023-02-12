@@ -119,7 +119,25 @@ App = {
       console.error(err);
     });
   }
+
+
+
+
 };
+
+
+
+// var nameInput = document.getElementById('myReceipt');
+
+// document.querySelector('form.pure-form').addEventListener('submit', function (e) {
+
+//     //prevent the normal submission of the form
+//     e.preventDefault();
+
+//     //bytes32 hash = keccak256(nameInput.value);
+//     console.log(nameInput.value);    
+// });
+
 
 $(function() {
   $(window).load(function() {

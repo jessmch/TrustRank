@@ -22,13 +22,13 @@ contract Election {
     );
 
     constructor () public {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("Product 1");
+        
     }
 
     function addCandidate (string _name) private {
         candidatesCount ++;
-        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+        candidates[0] = Candidate(candidatesCount, _name, 0);
     }
 
     function vote (uint _candidateId) public {
@@ -47,4 +47,9 @@ contract Election {
         // trigger voted event
         emit votedEvent(_candidateId);
     }
+
+ 
+
+
+
 }
