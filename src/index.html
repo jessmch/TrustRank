@@ -72,8 +72,13 @@
             document.getElementById("receipt").onclick = function(){
 
               var receipt = prompt("Enter your receipt");
+            
               document.getElementById("outputName").innerText = receipt;
+              
+              
             }
+
+
             </script>
 
 
@@ -85,10 +90,19 @@
             document.getElementById("comment").onclick = function(){
 
               var comment = prompt("Enter your comment");
-              
+
               document.getElementById("candidatesResults1").innerText = comment;
+
+              var candidateTemplate = 
+              candidatesResults.append("<tr><th>" + id + "</th><td>" + "Hello1");
+
+              
             }
+
+            
             </script>
+            <tbody id="candidatesResults">
+            </tbody>
 
 
 

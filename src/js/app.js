@@ -134,7 +134,7 @@ App = {
 //     //prevent the normal submission of the form
 //     e.preventDefault();
 
-//     //bytes32 hash = keccak256(nameInput.value);
+//     //bytes32 hash = nameInput.value);
 //     console.log(nameInput.value);    
 // });
 

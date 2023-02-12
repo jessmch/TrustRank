@@ -48,8 +48,6 @@ contract Election {
         emit votedEvent(_candidateId);
     }
 
- 
-
 
 
 }
