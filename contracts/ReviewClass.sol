@@ -10,6 +10,15 @@ contract ReviewClass {
         uint numStars;
     }
 
+    // Event triggered on form submission
+    event submittedEvent (
+        uint _product_id, 
+        uint _order_number, 
+        string _product_name, 
+        string _review_message, 
+        uint _num_stars
+    );
+
     // Get and set reviews
     mapping(uint => ReviewObject) public reviews;
 
@@ -31,5 +40,6 @@ contract ReviewClass {
         reviewCount ++;
         reviews[reviewCount] = ReviewObject(_product_id, _order_number, _product_name, _review_message, _num_stars);
         hm_orderNumber_bool[_order_number] = true;
+        emit submittedEvent(_product_id, _order_number, _product_name, _review_message, _num_stars);
     }
 }

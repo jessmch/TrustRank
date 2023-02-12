@@ -27,7 +27,21 @@ App = {
       // Connect provider to interact with contract
       App.contracts.ReviewClass.setProvider(App.web3Provider);
 
+      App.listenForEvents();
+      
       return App.render();
+    });
+  },
+
+  listenForEvents: function() {
+    App.contracts.ReviewClass.deployed().then(function(instance) {
+      instance.randomevent({}, { // buggy code if I use submittedEvent, which should work
+        fromBlock: 0,
+        toBlock: 'latest'
+      }).watch(function(error, event) {
+        console.log("event triggered", event)
+        App.render();
+      });
     });
   },
 
@@ -81,33 +95,12 @@ App = {
     });
   },
 
-  // castVote: function() {
-  //   var candidateId = $('#candidatesSelect').val();
-  //   App.contracts.Election.deployed().then(function(instance) {
-  //     return instance.vote(candidateId, { from: App.account });
-  //   }).then(function(result) {
-  //     // Wait for votes to update
-  //     $("#content").hide();
-  //     $("#loader").show();
-  //   }).catch(function(err) {
-  //     console.error(err);
-  //   });
-  // },
-
   submitReview: function() {
     var orderNumber = $('#orderNumber').val();
     var productID = $('#productID').val();
     var productName = $('#productName').val();
     var numStars = $('#numStars').val();
     var reviewMessage = $('#reviewMessage').val();
-
-    console.log(orderNumber);
-    console.log(productID);
-    console.log(productName);
-    console.log(numStars);
-    console.log(reviewMessage);
-
-
     App.contracts.ReviewClass.deployed().then(function(instance) {
       return instance.addReview(productID, orderNumber, productName, reviewMessage, numStars, { from: App.account });
     }).then(function(result) {
