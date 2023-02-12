@@ -30,7 +30,7 @@ $ npm install
 ## Step 5. Configure Metamask
 - Unlock Metamask
 - Connect metamask to your local Etherum blockchain provided by Ganache (RPC Server)
-- Import an account provided by ganache using private key
+- Import an account from Ganache by using the provided private key
 
 ## Step 6. Run the Front End Application
 `$ npm run dev`
