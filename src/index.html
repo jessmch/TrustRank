@@ -33,11 +33,12 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Product Name</th>
-                  <th scope="col">Reviews</th>
+          
                 </tr>
               </thead>
               <tbody id="candidatesResults">
               </tbody>
+
             </table>
             <hr/>
             <script>
@@ -65,15 +66,29 @@
 
             <button id="receipt">Submit Receipt</button>
             <p>
-            Your receipt is <span id="outputName">____</span>
+            Your receipt: <span id="outputName">____</span>
             </p>
             <script>
             document.getElementById("receipt").onclick = function(){
+
               var receipt = prompt("Enter your receipt");
               document.getElementById("outputName").innerText = receipt;
             }
             </script>
 
+
+            <button id="comment">Submit Comment</button>
+            <p>
+            Final review: <span id="candidatesResults1">____</span>
+            </p>
+            <script>
+            document.getElementById("comment").onclick = function(){
+
+              var comment = prompt("Enter your comment");
+              
+              document.getElementById("candidatesResults1").innerText = comment;
+            }
+            </script>
 
 
 
